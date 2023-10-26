@@ -1,0 +1,56 @@
+/* Reset some default styles */* {
+    margin: 0;    padding: 0;
+    box-sizing: border-box;}
+body {
+    font-family: 'Poppins', sans-serif;    background-color: #94618E; /* Grape background */
+    color: #000000; /* Black text color */}
+header {
+    background-color: #6C8877; /* Dark green header background */    padding: 10px 0;
+}
+nav ul {
+    list-style: none;    text-align: center;
+}
+nav li {    display: inline;
+    margin: 0 20px;}
+nav a {
+    text-decoration: none;    color: #FFF; /* White text color for links */
+    font-family: 'Lobster', cursive;}
+.intro {
+    display: flex;    justify-content: space-between;
+    align-items: center;    padding: 30px;
+}
+.profile-image img {    border-radius: 50%;
+    width: 200px;    height: 200px;
+    margin-right: 20px;}
+.profile-info h1 {
+    font-family: 'Roboto Slab', serif;    font-size: 36px;
+    color: #fff; /* Black text color for headings */}
+.profile-info p {
+    font-family: 'Open Sans', sans-serif;    font-size: 18px;
+    color: #000000; /* Black text color for paragraphs */}
+.section {
+    background-color: #FFF; /* White background for sections */    padding: 30px;
+    margin: 20px 0;    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.skills-list {    display: grid;
+    grid-template-columns: 1fr 1fr;    gap: 20px;
+}
+.skill {    margin-bottom: 10px;
+}
+.progress-bar {
+    background-color: #CCC; /* Light grey progress bar background */    height: 20px;
+    border-radius: 10px;    position: relative;
+}
+.progress {    background-color: #94618E; /* Grape progress bar color */
+    height: 100%;    border-radius: 10px;
+}
+.social-links a {    margin-right: 50px;
+    text-decoration: none;}
+/* Media Query for smaller screens */
+@media (max-width: 768px) {    .intro {
+        flex-direction: column;        align-items: center;
+    }    .profile-image img {
+        margin-right: 0;        margin-bottom: 20px;
+    }    .profile-info h1 {
+        text-align: center;    }
+}
