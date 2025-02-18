@@ -5,51 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KCT MCA CGPA Calculator for SEM-1</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-        
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 20px;
-        }
-        .logo {
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    position: relative;
+}
+
+.logo {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 50px; /* Adjust this value to make the logo smaller */
+    width: 50px;
 }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            position: relative;
-        }
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: #28a745;
-        }
-        select, button {
-            margin: 10px;
-            padding: 10px;
-            font-size: 16px;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        #result {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #28a745;
+}
+
+select, button {
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#result {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
     </style>
 </head>
 <body>
