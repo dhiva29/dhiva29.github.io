@@ -68,7 +68,7 @@ button:hover {
 <body>
     <div class="container">
         <img src="mcalogo.png" alt="MCA Logo" class="logo">
-        <h2>KCT MCA CGPA Calculator for SEM-1</h2>
+        <h2>KCT MCA GPA Calculator for SEM-1</h2>
         <form id="cgpaForm">
             <!-- Data Structures & Algorithms -->
             <label>24CAI501 Data Structures & Algorithms</label>
@@ -168,7 +168,7 @@ button:hover {
                 <option value="0">U</option>
             </select><br>
 
-            <button type="button" onclick="calculateCGPA()">Calculate CGPA</button>
+            <button type="button" onclick="calculateCGPA()">Calculate GPA</button>
         </form>
         <div id="result"></div>
     </div>
@@ -191,7 +191,7 @@ button:hover {
             });
 
             let cgpa = totalCredits > 0 ? (totalGradePoints / totalCredits) : 0;
-            let resultText = `Your CGPA is: ${cgpa.toFixed(2)}. `;
+            let resultText = `Your GPA is: ${cgpa.toFixed(2)}. `;
             
             if (cgpa >= 9) resultText += "Excellent! Keep up the great work!";
             else if (cgpa >= 8) resultText += "Very good! Aim for even higher!";
