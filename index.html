@@ -21,6 +21,12 @@
             display: inline-block;
             position: relative;
         }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+        }
         h2 {
             font-family: 'Montserrat', sans-serif;
             color: #28a745;
@@ -157,16 +163,21 @@
     <script>
         function calculateCGPA() {
             let totalGradePoints = 0;
-            let totalCredits = 24;
+            let totalCredits = 0;
             let grades = document.querySelectorAll('.grade');
 
             grades.forEach(grade => {
                 let gradePoint = parseInt(grade.value);
                 let credit = parseInt(grade.getAttribute('data-credit'));
-                totalGradePoints += gradePoint * credit;
+                
+                // Only add credits if the grade is not RA, RA-AB, or U
+                if (gradePoint > 0) {
+                    totalCredits += credit;
+                    totalGradePoints += gradePoint * credit;
+                }
             });
 
-            let cgpa = totalGradePoints / totalCredits;
+            let cgpa = totalCredits > 0 ? (totalGradePoints / totalCredits) : 0;
             let resultText = `Your CGPA is: ${cgpa.toFixed(2)}. `;
             
             if (cgpa >= 9) resultText += "Excellent! Keep up the great work!";
