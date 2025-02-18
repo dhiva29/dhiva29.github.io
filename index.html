@@ -3,69 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCA SEM 1 GPA CALCULATOR</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>KCT MCA CGPA Calculator for SEM-1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #28a745;
+        }
+        select, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/Kumaraguru_College_of_Technology_logo.png" alt="KCT Logo Left" class="logo left-logo">
-        <h1>MCA SEM 1 GPA CALCULATOR</h1>
-        <img src="https://kct.ac.in/wp-content/uploads/2024/05/KCT-N.png" alt="KCT Logo Right" class="logo right-logo">
-    </header>
-
     <div class="container">
+        <img src="https://campus.kumaraguru.in/static/bootstrap/img/KILogo.jpeg" alt="KCT Logo" class="logo">
+        <h2>KCT MCA CGPA Calculator for SEM-1</h2>
         <form id="cgpaForm">
-            <div class="subject">
-                <label>24CAI501 - Data Structures & Algorithms (4 credits):</label>
-                <select class="grade">
-                    <option value="10">O (Outstanding)</option>
-                    <option value="9">A+ (Excellent)</option>
-                    <option value="8">A (Very Good)</option>
-                    <option value="7">B+ (Good)</option>
-                    <option value="6">B (Average)</option>
-                    <option value="0">RA (Re-appearance)</option>
-                    <option value="0">RA-SA (Shortage of Attendance)</option>
-                    <option value="0">RA-AB (Absent)</option>
-                    <option value="0">U (Fail)</option>
-                </select>
-            </div>
+            <!-- Data Structures & Algorithms -->
+            <label>24CAI501 Data Structures & Algorithms</label>
+            <select class="grade" data-credit="4">
+                <option value="10">O</option>
+                <option value="9">A+</option>
+                <option value="8">A</option>
+                <option value="7">B+</option>
+                <option value="6">B</option>
+                <option value="5">C</option>
+                <option value="0">RA</option>
+                <option value="0">RA-AB</option>
+                <option value="0">U</option>
+            </select><br>
+            
+            <!-- Database Management -->
+            <label>24CAI502 Database Management</label>
+            <select class="grade" data-credit="4">
+                <option value="10">O</option>
+                <option value="9">A+</option>
+                <option value="8">A</option>
+                <option value="7">B+</option>
+                <option value="6">B</option>
+                <option value="5">C</option>
+                <option value="0">RA</option>
+                <option value="0">RA-AB</option>
+                <option value="0">U</option>
+            </select><br>
 
-            <div class="subject">
-                <label>24CAI502 - Database Management (4 credits):</label>
-                <select class="grade">...</select>
-            </div>
+            <!-- Object Oriented Programming in Java -->
+            <label>24CAI503 Object Oriented Programming in Java</label>
+            <select class="grade" data-credit="4">
+                <option value="10">O</option>
+                <option value="9">A+</option>
+                <option value="8">A</option>
+                <option value="7">B+</option>
+                <option value="6">B</option>
+                <option value="5">C</option>
+                <option value="0">RA</option>
+                <option value="0">RA-AB</option>
+                <option value="0">U</option>
+            </select><br>
 
-            <div class="subject">
-                <label>24CAI503 - Object Oriented Programming in Java (4 credits):</label>
-                <select class="grade">...</select>
-            </div>
+            <!-- Operating Systems -->
+            <label>24CAT504 Operating Systems</label>
+            <select class="grade" data-credit="3">
+                <option value="10">O</option>
+                <option value="9">A+</option>
+                <option value="8">A</option>
+                <option value="7">B+</option>
+                <option value="6">B</option>
+                <option value="5">C</option>
+                <option value="0">RA</option>
+                <option value="0">RA-AB</option>
+                <option value="0">U</option>
+            </select><br>
 
-            <div class="subject">
-                <label>24CAT504 - Operating Systems (3 credits):</label>
-                <select class="grade">...</select>
-            </div>
+            <!-- Cloud Computing -->
+            <label>24CAT505 Cloud Computing</label>
+            <select class="grade" data-credit="3">
+                <option value="10">O</option>
+                <option value="9">A+</option>
+                <option value="8">A</option>
+                <option value="7">B+</option>
+                <option value="6">B</option>
+                <option value="5">C</option>
+                <option value="0">RA</option>
+                <option value="0">RA-AB</option>
+                <option value="0">U</option>
+            </select><br>
 
-            <div class="subject">
-                <label>24CAT505 - Cloud Computing (3 credits):</label>
-                <select class="grade">...</select>
-            </div>
+            <!-- Probability and Statistics -->
+            <label>24MAI504 Probability and Statistics</label>
+            <select class="grade" data-credit="4">
+                <option value="10">O</option>
+                <option value="9">A+</option>
+                <option value="8">A</option>
+                <option value="7">B+</option>
+                <option value="6">B</option>
+                <option value="5">C</option>
+                <option value="0">RA</option>
+                <option value="0">RA-AB</option>
+                <option value="0">U</option>
+            </select><br>
 
-            <div class="subject">
-                <label>24MAI504 - Probability & Statistics (4 credits):</label>
-                <select class="grade">...</select>
-            </div>
-
-            <div class="subject">
-                <label>24HST506 - Professional Communication Strategies Theory (2 credits):</label>
-                <select class="grade">...</select>
-            </div>
+            <!-- Professional Communication Strategies -->
+            <label>24HST506 Professional Communication Strategies</label>
+            <select class="grade" data-credit="2">
+                <option value="10">O</option>
+                <option value="9">A+</option>
+                <option value="8">A</option>
+                <option value="7">B+</option>
+                <option value="6">B</option>
+                <option value="5">C</option>
+                <option value="0">RA</option>
+                <option value="0">RA-AB</option>
+                <option value="0">U</option>
+            </select><br>
 
             <button type="button" onclick="calculateCGPA()">Calculate CGPA</button>
         </form>
-
         <div id="result"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function calculateCGPA() {
+            let totalGradePoints = 0;
+            let totalCredits = 24;
+            let grades = document.querySelectorAll('.grade');
+
+            grades.forEach(grade => {
+                let gradePoint = parseInt(grade.value);
+                let credit = parseInt(grade.getAttribute('data-credit'));
+                totalGradePoints += gradePoint * credit;
+            });
+
+            let cgpa = totalGradePoints / totalCredits;
+            let resultText = `Your CGPA is: ${cgpa.toFixed(2)}. `;
+            
+            if (cgpa >= 9) resultText += "Excellent! Keep up the great work!";
+            else if (cgpa >= 8) resultText += "Very good! Aim for even higher!";
+            else if (cgpa >= 7) resultText += "Good job! Keep improving!";
+            else if (cgpa >= 6) resultText += "You can do better! Stay focused!";
+            else resultText += "Work harder and improve next time!";
+            
+            document.getElementById('result').innerText = resultText;
+        }
+    </script>
 </body>
 </html>
