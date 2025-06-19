@@ -61,12 +61,25 @@
       font-weight: bold;
     }
 
-    .emoji {
-      position: fixed;
-      font-size: 24px;
-      animation: floatUp 3s linear infinite;
-      z-index: 999;
-    }
+.emoji {
+  position: fixed;
+  bottom: 0;
+  font-size: 28px;
+  animation: floatUp 2s ease-out forwards;
+  z-index: 999;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+}
 
     @keyframes floatUp {
       0% { transform: translateY(0); opacity: 1; }
@@ -117,17 +130,17 @@
   </div>
 
   <script>
-    function dropEmojis(emoji) {
-      for (let i = 0; i < 20; i++) {
-        let el = document.createElement('div');
-        el.classList.add('emoji');
-        el.innerText = emoji;
-        el.style.left = Math.random() * 100 + 'vw';
-        document.body.appendChild(el);
-        setTimeout(() => el.remove(), 3000);
-      }
-    }
-
+function dropEmojis(emoji) {
+  for (let i = 0; i < 25; i++) {
+    let el = document.createElement('div');
+    el.classList.add('emoji');
+    el.innerText = emoji;
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.fontSize = (24 + Math.random() * 12) + 'px';
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 2000); // remove after 2s
+  }
+}
     function calculateCGPA() {
       let totalGradePoints = 0;
       let totalCredits = 0;
