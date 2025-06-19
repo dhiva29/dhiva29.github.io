@@ -63,23 +63,23 @@
 
 .emoji {
   position: fixed;
-  bottom: 0;
   font-size: 28px;
-  animation: floatUp 2s ease-out forwards;
+  animation: floatUp 3s ease-out forwards;
   z-index: 999;
   pointer-events: none;
 }
 
 @keyframes floatUp {
   0% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
   100% {
-    transform: translateY(-150px);
+    transform: translateY(-150px) scale(1.2);
     opacity: 0;
   }
 }
+
 
     @keyframes floatUp {
       0% { transform: translateY(0); opacity: 1; }
@@ -131,14 +131,19 @@
 
   <script>
 function dropEmojis(emoji) {
-  for (let i = 0; i < 25; i++) {
+  for (let i = 0; i < 30; i++) {
     let el = document.createElement('div');
     el.classList.add('emoji');
     el.innerText = emoji;
+
+    // Random position across screen
     el.style.left = Math.random() * 100 + 'vw';
+    el.style.top = Math.random() * 80 + 'vh'; // anywhere from top to bottom
     el.style.fontSize = (24 + Math.random() * 12) + 'px';
+    el.style.transform = `rotate(${Math.random() * 360}deg)`;
+
     document.body.appendChild(el);
-    setTimeout(() => el.remove(), 2000); // remove after 2s
+    setTimeout(() => el.remove(), 3000); // remove after 3s
   }
 }
     function calculateCGPA() {
