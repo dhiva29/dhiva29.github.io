@@ -124,6 +124,10 @@
       <label>GPA of Sem 2 is auto-calculated</label>
       <input type="text" id="sem2" readonly>
       <button onclick="calculateFinalCGPA()">Get Final CGPA</button>
+      <button onclick="window.location.href='https://kct-mca-sem1-gpa-calculator.netlify.app/'">
+  SEM1 GPA CALCULATOR
+</button>
+
     </div>
 
     <div id="finalCGPA"></div>
@@ -171,8 +175,8 @@ function dropEmojis(emoji) {
         gpaText += "Great work! ⭐";
         dropEmojis("⭐");
       } else if (gpa >= 7) {
-        gpaText += "Good effort! 👍";
-        dropEmojis("👍");
+        gpaText += "Good effort! ❤️";
+        dropEmojis("❤️");
       } else {
         gpaText += "Keep pushing! 💪";
         dropEmojis("💪");
